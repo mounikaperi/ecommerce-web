@@ -1,6 +1,7 @@
+import { Home } from '@mui/icons-material';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import WebFont from 'webfontloader';
 
 function App() {
@@ -31,6 +32,14 @@ function App() {
     if (e.ctrlKey && e.shiftKey && e.keyCode === 73) e.preventDefault(); // Opens the "Elements" panel in developer tools.
     if (e.ctrlKey && e.shiftKey && e.keyCode === 74) e.preventDefault(); // Opens the "Console" in developer tools.
   })
+
+  return (
+    <>
+      <Routes>
+        <Route path="/" element = {<Home />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
