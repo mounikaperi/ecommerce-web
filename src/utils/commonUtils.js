@@ -1,11 +1,20 @@
 const getRandomProducts = (prodsArray, n) => {
   return prodsArray.sort(() => 0.5-Math.random()).slice(0,n);
-}
+};
 
 const getDiscount = (price, cuttedPrice) => {
     return (((cuttedPrice - price) / cuttedPrice) * 100).toFixed();
-}
+};
 
+const getDeliveryDate = () => {
+    const deliveryDate = new Date();
+    deliveryDate.setDate(new Date().getDate() + 7)
+    return deliveryDate.toUTCString().substring(0, 11);
+};
+
+const formatDate = (dt) => {
+    return new Date(dt).toUTCString().substring(0,16);
+}
 
 const offerProducts = [
   {
@@ -169,5 +178,7 @@ const offerProducts = [
 module.exports = {
   getRandomProducts,
   getDiscount,
-  offerProducts
+  formatDate,
+  offerProducts,
+  getDeliveryDate
 }
