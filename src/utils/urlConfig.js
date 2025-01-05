@@ -2,12 +2,16 @@ const getAllProducts = () => '/api/v1/products/all';
 const getProduct = (id) => `/api/v1/product/${id}`;
 const getProductsUrl = () => '/api/v1/products';
 
+const getAdminUserUrl = (id) => `/api/v1/admin/user/${id}`;
+const getAllUsersUrl = () =>  '/api/v1/admin/users';
 const getRegisterUserUrl = () => '/api/v1/register';
 const getLogoutUserUrl = () => '/api/v1/logout';
 const getLoginUserUrl = () => '/api/v1/login';
 const getLoadUserUrl = () => '/api/v1/me';
 const getUpdateUserProfileUrl = () => '/api/v1/me/update';
 const getUpdateUserPasswordUrl = () => '/api/v1/password/update';
+const getForgotUserPasswordUrl = () => '/api/v1/password/forgot';
+const getUserResetPasswordUrl = (token) => `/api/v1/password/reset/${token}`;
 
 const getNewReviewUserUrl = () => '/api/v1/review';
 
@@ -46,5 +50,9 @@ module.exports = {
   getDeleteOrderUrl,
   getLoadUserUrl,
   getUpdateUserProfileUrl,
-  getUpdateUserPasswordUrl
+  getUpdateUserPasswordUrl,
+  getForgotUserPasswordUrl,
+  getUserResetPasswordUrl,
+  getAllUsersUrl,
+  getAdminUserUrl
 }
