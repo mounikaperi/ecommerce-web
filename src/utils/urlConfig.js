@@ -2,8 +2,14 @@ const getAllProducts = () => '/api/v1/products/all';
 const getProduct = (id) => `/api/v1/product/${id}`;
 const getProductsUrl = () => '/api/v1/products';
 
+const getAdminProductUrl = (id) => `/api/v1/admin/product/${id}`;
+const getAdminCreateProductUrl = () => `/api/v1/admin/product/new`;
+const getAdminProductsUrl = () => `/api/v1/admin/products`;
+const getAddItemToCartUrl = (id) => `/api/v1/product/${id}`;
+
 const getAdminUserUrl = (id) => `/api/v1/admin/user/${id}`;
 const getAllUsersUrl = () =>  '/api/v1/admin/users';
+
 const getRegisterUserUrl = () => '/api/v1/register';
 const getLogoutUserUrl = () => '/api/v1/logout';
 const getLoginUserUrl = () => '/api/v1/login';
@@ -14,8 +20,7 @@ const getForgotUserPasswordUrl = () => '/api/v1/password/forgot';
 const getUserResetPasswordUrl = (token) => `/api/v1/password/reset/${token}`;
 
 const getNewReviewUserUrl = () => '/api/v1/review';
-
-const getAddItemToCartUrl = (id) => `/api/v1/product/${id}`;
+const getAdminReviewsUrl = () => '/api/v1/admin/reviews';
 
 const getPaymentProcessUrl = () => '/api/v1/payment/process';
 const getPaytmProcessUrl = () => 'https://securegw-stage.paytm.in/order/process';
@@ -54,5 +59,9 @@ module.exports = {
   getForgotUserPasswordUrl,
   getUserResetPasswordUrl,
   getAllUsersUrl,
-  getAdminUserUrl
+  getAdminUserUrl,
+  getAdminProductUrl,
+  getAdminCreateProductUrl,
+  getAdminProductsUrl,
+  getAdminReviewsUrl
 }

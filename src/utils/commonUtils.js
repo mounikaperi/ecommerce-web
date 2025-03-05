@@ -1,18 +1,18 @@
-const getRandomProducts = (prodsArray, n) => {
+export const getRandomProducts = (prodsArray, n) => {
   return prodsArray.sort(() => 0.5-Math.random()).slice(0,n);
 };
 
-const getDiscount = (price, cuttedPrice) => {
+export const getDiscount = (price, cuttedPrice) => {
     return (((cuttedPrice - price) / cuttedPrice) * 100).toFixed();
 };
 
-const getDeliveryDate = () => {
+export const getDeliveryDate = () => {
     const deliveryDate = new Date();
     deliveryDate.setDate(new Date().getDate() + 7)
     return deliveryDate.toUTCString().substring(0, 11);
 };
 
-const formatDate = (dt) => {
+export const formatDate = (dt) => {
     return new Date(dt).toUTCString().substring(0,16);
 }
 
@@ -25,7 +25,7 @@ export const categories = [
     "Home",
 ];
 
-const offerProducts = [
+export const offerProducts = [
   {
       image: "https://rukminim1.flixcart.com/image/150/150/jqgy3rk0/computer-table/j/2/v/particle-board-dkl-comp-tb-09-delite-kom-brown-original-imafcheqbgers37z.jpeg",
       name: "Office Study Tables",
@@ -182,12 +182,4 @@ const offerProducts = [
       offer: "Upto 80% Off",
       tag: "Buy Now!",
   }
-]
-
-module.exports = {
-  getRandomProducts,
-  getDiscount,
-  formatDate,
-  offerProducts,
-  getDeliveryDate
-}
+];

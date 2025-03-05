@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { getDiscount } from '../../utils/functions';
+import { getDiscount } from '../../utils/commonUtils';
 import DeleteIcon from '@mui/icons-material/Delete';
 import StarIcon from '@mui/icons-material/Star';
 import { removeFromWishlist } from '../../actions/wishlistAction';

@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { clearErrors, getOrderDetails, updateOrder } from '../../actions/orderAction';
 import { UPDATE_ORDER_RESET } from '../../constants/orderConstants';
-import { formatDate } from '../../utils/functions';
+import { formatDate } from '../../utils/commonUtils';
 import TrackStepper from '../Order/TrackStepper';
 import Loading from './Loading';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
