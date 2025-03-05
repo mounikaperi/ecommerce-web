@@ -1,6 +1,6 @@
 import WebFont from 'webfontloader';
-import Footer from './components/Layouts/Footer/Footer';
-import Header from './components/Layouts/Header/Header';
+import Footer from './Layouts/Footer/Footer';
+import Header from './Layouts/Header/Header';
 import Login from './components/User/Login';
 import Register from './components/User/Register';
 import { Routes, Route, useLocation } from 'react-router-dom';
@@ -12,7 +12,7 @@ import UpdatePassword from './components/User/UpdatePassword';
 import ForgotPassword from './components/User/ForgotPassword';
 import ResetPassword from './components/User/ResetPassword';
 import Account from './components/User/Account';
-import ProtectedRoute from './Routes/ProtectedRoute';
+import ProtectedRoute from './routes/ProtectedRoute';
 import Home from './components/Home/Home';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import Products from './components/Products/Products';

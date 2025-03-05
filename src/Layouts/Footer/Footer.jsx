@@ -3,7 +3,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import StarsIcon from '@mui/icons-material/Stars';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import HelpIcon from '@mui/icons-material/Help';
-import paymentMethods from '../../../assets/images/payment-methods.svg';
+import paymentMethods from '../../assets/payment-methods.svg';
 import { useLocation } from 'react-router-dom';
 
 const footerLinks = [

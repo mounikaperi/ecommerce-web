@@ -2,7 +2,7 @@ import axios from 'axios';
 import { getAdminUserUrl, getAllUsersUrl, getForgotUserPasswordUrl, getLoadUserUrl, getLoginUserUrl, getLogoutUserUrl, getRegisterUserUrl, getUpdateUserPasswordUrl, getUpdateUserProfileUrl, getUserResetPasswordUrl } from '../utils/urlConfig';
 import { ALL_USERS, CLEAR_ERRORS, DELETE_USER, FORGOT_PASSWORD, LOAD_USER, LOGIN_USER, LOGOUT_USER, REGISTER_USER, RESET_PASSWORD, UPDATE_PASSWORD, UPDATE_PROFILE, UPDATE_USER, USER_DETAILS } from '../constants/userConstants';
 
-const registerUser = (userData) => async (dispatch) => {
+export const registerUser = (userData) => async (dispatch) => {
   try {
     dispatch({ type: REGISTER_USER.REGISTER_USER_REQUEST });  
     const config = {
@@ -23,7 +23,7 @@ const registerUser = (userData) => async (dispatch) => {
   }
 };
 
-const loginUser = (email, password) => async (dispatch) => {
+export const loginUser = (email, password) => async (dispatch) => {
   try {
     dispatch({ type: LOGIN_USER.LOGIN_USER_REQUEST });
     const config = {
@@ -44,7 +44,7 @@ const loginUser = (email, password) => async (dispatch) => {
   }
 };
 
-const logoutUser = () => async (dispatch) => {
+export const logoutUser = () => async (dispatch) => {
   try {
     await axios.get(getLogoutUserUrl());
     dispatch({ type: LOGOUT_USER.LOGOUT_USER_SUCCESS });
@@ -56,7 +56,7 @@ const logoutUser = () => async (dispatch) => {
   }
 };
 
-const loadUser = () => async (dispatch) => {
+export const loadUser = () => async (dispatch) => {
   try {
     dispatch({ type: LOAD_USER.LOAD_USER_REQUEST });
     const { data } = await axios.get(getLoadUserUrl());
@@ -69,7 +69,7 @@ const loadUser = () => async (dispatch) => {
   }
 };
 
-const updateProfile = (userData) => async (dispatch) => {
+export const updateProfile = (userData) => async (dispatch) => {
   try {
     dispatch({ type: UPDATE_PROFILE.UPDATE_PROFILE_REQUEST });
     const config = {
@@ -94,7 +94,7 @@ const updateProfile = (userData) => async (dispatch) => {
   }
 };
  
-const updatePassword = (passwords) => async (dispatch) => {
+export const updatePassword = (passwords) => async (dispatch) => {
   try {
     dispatch({ type: UPDATE_PASSWORD.UPDATE_PASSWORD_REQUEST });
     const config = {
@@ -119,7 +119,7 @@ const updatePassword = (passwords) => async (dispatch) => {
   }
 };
 
-const forgotPassword = (email) => async (dispatch) => {
+export const forgotPassword = (email) => async (dispatch) => {
   try {
     dispatch({ type: FORGOT_PASSWORD.FORGOT_PASSWORD_REQUEST });
     const config = {
@@ -134,7 +134,7 @@ const forgotPassword = (email) => async (dispatch) => {
   }
 };
 
-const resetPassword = (token, passwords) => async (dispatch) => {
+export const resetPassword = (token, passwords) => async (dispatch) => {
   try {
     dispatch({ type: RESET_PASSWORD.RESET_PASSWORD_REQUEST });
     const config = {
@@ -149,7 +149,7 @@ const resetPassword = (token, passwords) => async (dispatch) => {
   }
 };
 
-const getAllUsers = () => async (dispatch) => {
+export const getAllUsers = () => async (dispatch) => {
   try {
     dispatch({ type: ALL_USERS.ALL_USERS_REQUEST });
     const { data } = await axios.get(getAllUsersUrl());
@@ -159,7 +159,7 @@ const getAllUsers = () => async (dispatch) => {
   }
 };
 
-const getUserDetails = (id) => async (dispatch) => {
+export const getUserDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: USER_DETAILS.USER_DETAILS_REQUEST });
     const { data } = await axios.get(getAdminUserUrl(id));
@@ -169,7 +169,7 @@ const getUserDetails = (id) => async (dispatch) => {
   }
 };
 
-const updateUser = (id, userData) => async (dispatch) => {
+export const updateUser = (id, userData) => async (dispatch) => {
   try {
     dispatch({ type: UPDATE_USER.UPDATE_USER_REQUEST });
     const config = {
@@ -184,7 +184,7 @@ const updateUser = (id, userData) => async (dispatch) => {
   }
 };
 
-const deleteUser = (id) => async (dispatch) => {
+export const deleteUser = (id) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_USER.DELETE_USER_REQUEST });
     const { data } = await axios.delete(getAdminUserUrl(id));
@@ -194,22 +194,6 @@ const deleteUser = (id) => async (dispatch) => {
   }
 };
 
-const clearErrors = () => async (dispatch) => {
+export const clearErrors = () => async (dispatch) => {
   dispatch({ type: CLEAR_ERRORS });
-};
-
-module.exports = {
-  registerUser,
-  loginUser,
-  logoutUser,
-  loadUser,
-  updateProfile,
-  updatePassword,
-  forgotPassword,
-  resetPassword,
-  getAllUsers,
-  getUserDetails,
-  updateUser,
-  deleteUser,
-  clearErrors
 };
