@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
-import MetaData from '../Layouts/MetaData';
-import MinCategory from '../Layouts/MinCategory';
+import MetaData from "../../Layouts/Metadata";
+import MinCategory from '../../Layouts/MinCategory';
 import Sidebar from '../User/Sidebar';
 import Product from './Product';
 

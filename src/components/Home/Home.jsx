@@ -2,7 +2,7 @@ import { useSnackbar } from "notistack";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { clearErrors, getSliderProducts } from "../../actions/productAction";
-import MetaData from '../Layouts/MetaData';
+import MetaData from "../../Layouts/Metadata";
 import Categories from "../../Layouts/Categories";
 import Banner from "./Banner/Banner";
 import DealSlider from "./DealSlider/DealSlider";

@@ -6,7 +6,7 @@ import { clearErrors, deleteReview, getAllReviews } from '../../actions/productA
 import Rating from '@mui/material/Rating';
 import Actions from './Actions';
 import { DELETE_REVIEW } from '../../constants/productConstants';
-import MetaData from '../Layouts/MetaData';
+import MetaData from "../../Layouts/Metadata";
 import BackdropLoader from '../Layouts/BackdropLoader';
 
 const ReviewsTable = () => {

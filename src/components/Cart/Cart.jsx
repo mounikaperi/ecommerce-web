@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import MetaData from '../Layouts/MetaData';
+import MetaData from '../../Layouts/Metadata';
 import CartItem from './CartItem';
 import EmptyCart from './EmptyCart';
 import PriceSidebar from './PriceSidebar';

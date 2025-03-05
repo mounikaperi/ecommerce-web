@@ -25,8 +25,8 @@ import { NEW_REVIEW } from '../../constants/productConstants';
 import { addItemsToCart } from '../../actions/cartAction';
 import { getDeliveryDate, getDiscount } from '../../utils/commonUtils';
 import { addToWishlist, removeFromWishlist } from '../../actions/wishlistAction';
-import MinCategory from '../Layouts/MinCategory';
-import MetaData from '../Layouts/MetaData';
+import MinCategory from '../../Layouts/MinCategory';
+import MetaData from "../../Layouts/Metadata";
 
 
 const ProductDetails = () => {

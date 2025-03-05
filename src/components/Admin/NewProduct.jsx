@@ -8,8 +8,8 @@ import { useNavigate } from 'react-router-dom';
 import { NEW_PRODUCT } from '../../constants/productConstants';
 import { createProduct, clearErrors } from '../../actions/productAction';
 import ImageIcon from '@mui/icons-material/Image';
-import { categories } from '../../utils/constants';
-import MetaData from '../Layouts/MetaData';
+import { categories } from '../../utils/commonUtils';
+import MetaData from "../../Layouts/Metadata";
 import BackdropLoader from '../Layouts/BackdropLoader';
 
 const NewProduct = () => {

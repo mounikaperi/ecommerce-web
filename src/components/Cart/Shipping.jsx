@@ -10,7 +10,7 @@ import Stepper from './Stepper';
 import { useSnackbar } from 'notistack';
 import { saveShippingInfo } from '../../actions/cartAction';
 import { useNavigate } from 'react-router-dom';
-import MetaData from '../Layouts/MetaData';
+import MetaData from "../../Layouts/Metadata";
 import states from '../../utils/states';
 
 const Shipping = () => {

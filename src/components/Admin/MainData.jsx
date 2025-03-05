@@ -4,8 +4,8 @@ import { getAdminProducts } from "../../actions/productAction";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllOrders } from "../../actions/orderAction";
 import { getAllUsers } from "../../actions/userAction";
-import { categories } from "../../utils/constants";
-import MetaData from "../Layouts/MetaData";
+import { categories } from "../../utils/commonUtils";
+import MetaData from "../../Layouts/Metadata";
 
 const MainData = () => {
   const dispatch = useDispatch();

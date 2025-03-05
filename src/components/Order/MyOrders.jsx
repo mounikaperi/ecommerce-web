@@ -9,8 +9,8 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import SearchIcon from '@mui/icons-material/Search';
-import MinCategory from '../Layouts/MinCategory';
-import MetaData from '../Layouts/MetaData';
+import MinCategory from '../../Layouts/MinCategory';
+import MetaData from "../../Layouts/Metadata";
 
 const orderStatus = ["Processing", "Shipped", "Delivered"];
 const dt = new Date();

@@ -14,8 +14,8 @@ import Product from './Product';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import StarIcon from '@mui/icons-material/Star';
-import { categories } from '../../utils/constants';
-import MetaData from '../Layouts/MetaData';
+import { categories } from '../../utils/commonUtils';
+import MetaData from "../../Layouts/Metadata";
 import { useLocation, useParams } from 'react-router-dom';
 
 const Products = () => {

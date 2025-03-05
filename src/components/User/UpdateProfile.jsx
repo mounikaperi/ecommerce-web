@@ -6,8 +6,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearErrors, loadUser, updateProfile } from '../../actions/userAction';
 import { UPDATE_PROFILE } from '../../constants/userConstants';
-import BackdropLoader from '../Layouts/BackdropLoader';
-import MetaData from '../Layouts/MetaData';
+import BackdropLoader from '../../Layouts/BackdropLoader';
+import MetaData from "../../Layouts/Metadata";
 
 
 const UpdateProfile = () => {

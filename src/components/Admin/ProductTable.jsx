@@ -7,7 +7,7 @@ import { clearErrors, deleteProduct, getAdminProducts } from '../../actions/prod
 import Rating from '@mui/material/Rating';
 import { DELETE_PRODUCT } from '../../constants/productConstants';
 import Actions from './Actions';
-import MetaData from '../Layouts/MetaData';
+import MetaData from "../../Layouts/Metadata";
 import BackdropLoader from '../Layouts/BackdropLoader';
 
 const ProductTable = () => {

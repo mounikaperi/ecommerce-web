@@ -6,7 +6,7 @@ import { clearErrors, deleteOrder, getAllOrders } from '../../actions/orderActio
 import { DELETE_ORDER } from '../../constants/orderConstants';
 import Actions from './Actions';
 import { formatDate } from '../../utils/functions';
-import MetaData from '../Layouts/MetaData';
+import MetaData from "../../Layouts/Metadata";
 import BackdropLoader from '../Layouts/BackdropLoader';
 
 const OrderTable = () => {

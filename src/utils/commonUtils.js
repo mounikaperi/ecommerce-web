@@ -16,6 +16,15 @@ const formatDate = (dt) => {
     return new Date(dt).toUTCString().substring(0,16);
 }
 
+export const categories = [
+    "Electronics",
+    "Mobiles",
+    "Laptops",
+    "Fashion",
+    "Appliances",
+    "Home",
+];
+
 const offerProducts = [
   {
       image: "https://rukminim1.flixcart.com/image/150/150/jqgy3rk0/computer-table/j/2/v/particle-board-dkl-comp-tb-09-delite-kom-brown-original-imafcheqbgers37z.jpeg",

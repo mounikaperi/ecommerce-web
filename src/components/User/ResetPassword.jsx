@@ -4,8 +4,8 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { resetPassword, clearErrors } from '../../actions/userAction';
 import { useSnackbar } from 'notistack';
-import BackdropLoader from '../Layouts/BackdropLoader';
-import MetaData from '../Layouts/MetaData';
+import BackdropLoader from '../../Layouts/BackdropLoader';
+import MetaData from "../../Layouts/Metadata";
 import FormSidebar from './FormSidebar';
 
 const ResetPassword = () => {

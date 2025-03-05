@@ -10,7 +10,7 @@ import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
-import MetaData from '../Layouts/MetaData';
+import MetaData from "../../Layouts/Metadata";
 import { getPaymentProcessUrl, getPaytmProcessUrl } from '../../utils/urlConfig';
 
 const Payment = () => {

@@ -9,8 +9,8 @@ import { REMOVE_PRODUCT_DETAILS, UPDATE_PRODUCT_RESET } from '../../constants/pr
 import { clearErrors, getProductDetails, updateProduct } from '../../actions/productAction';
 import ImageIcon from '@mui/icons-material/Image';
 import BackdropLoader from '../Layouts/BackdropLoader';
-import { categories } from '../../utils/constants';
-import MetaData from '../Layouts/MetaData';
+import { categories } from '../../utils/commonUtils';
+import MetaData from "../../Layouts/Metadata";
 
 const UpdateProduct = () => {
   

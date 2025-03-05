@@ -9,7 +9,7 @@ import { formatDate } from '../../utils/functions';
 import TrackStepper from '../Order/TrackStepper';
 import Loading from './Loading';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import MetaData from '../Layouts/MetaData';
+import MetaData from "../../Layouts/Metadata";
 
 const UpdateOrder = () => {
 
