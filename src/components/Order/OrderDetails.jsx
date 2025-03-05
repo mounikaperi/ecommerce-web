@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { clearErrors, getOrderDetails } from "../../actions/orderAction";
-import Loader from "../Layouts/Loader";
+import Loader from "../../Layouts/Loader";
 import TrackStepper from "./TrackStepper";
 import MinCategory from "../../Layouts/MinCategory";
 import MetaData from "../../Layouts/Metadata";

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { emptyCart } from '../../actions/cartAction';
 import { clearErrors, getPaymentStatus, newOrder } from '../../actions/orderAction';
-import Loader from '../Layouts/Loader';
+import Loader from '../../Layouts/Loader';
 
 const OrderStatus = () => {
 

@@ -2,7 +2,7 @@ import axios from "axios";
 import { ADD_TO_WISHLIST, REMOVE_FROM_WISHLIST } from "../constants/wishlistConstants";
 import { getProduct } from "../utils/urlConfig";
 
-const addToWishlist = (id) => async (dispatch, getState) => {
+export const addToWishlist = (id) => async (dispatch, getState) => {
   const { data } = await axios.get(getProduct(id));
   dispatch({
     type: ADD_TO_WISHLIST,
@@ -19,15 +19,10 @@ const addToWishlist = (id) => async (dispatch, getState) => {
   localStorage.setItem('wishlistItems', JSON.stringify(getState().wishlist.wishlistItems));
 }
 
-const removeFromWishlist = (id) => async (dispatch, getState) => {
+export const removeFromWishlist = (id) => async (dispatch, getState) => {
   dispatch({
     type: REMOVE_FROM_WISHLIST,
     payload: id
   });
   localStorage.setItem('wishlistItems', JSON.stringify(getState().wishlist.wishlistItems));
-}
-
-module.exports = {
-  addToWishlist,
-  removeFromWishlist
 }
