@@ -12,7 +12,7 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import TextField from '@mui/material/TextField';
 import MetaData from "../../Layouts/Metadata";
-import BackdropLoader from '../Layouts/BackdropLoader';
+import BackdropLoader from '../../Layouts/BackdropLoader';
 
 const UpdateUser = () => {
   const dispatch = useDispatch();

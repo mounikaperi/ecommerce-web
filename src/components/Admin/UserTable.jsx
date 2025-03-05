@@ -6,7 +6,7 @@ import { clearErrors, deleteUser, getAllUsers } from '../../actions/userAction';
 import { DELETE_USER } from '../../constants/userConstants';
 import Actions from './Actions';
 import MetaData from "../../Layouts/Metadata";
-import BackdropLoader from '../Layouts/BackdropLoader';
+import BackdropLoader from '../../Layouts/BackdropLoader';
 
 const UserTable = () => {
   const dispatch = useDispatch();

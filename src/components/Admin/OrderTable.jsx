@@ -5,9 +5,9 @@ import { useSnackbar } from 'notistack';
 import { clearErrors, deleteOrder, getAllOrders } from '../../actions/orderAction';
 import { DELETE_ORDER } from '../../constants/orderConstants';
 import Actions from './Actions';
-import { formatDate } from '../../utils/functions';
+import { formatDate } from '../../utils/commonUtils';
 import MetaData from "../../Layouts/Metadata";
-import BackdropLoader from '../Layouts/BackdropLoader';
+import BackdropLoader from '../../Layouts/BackdropLoader';
 
 const OrderTable = () => {
 

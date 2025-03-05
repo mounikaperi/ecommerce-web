@@ -4,7 +4,7 @@ import { getAllOrdersUrl, getDeleteOrderUrl, getMyOrdersUrl, getNewOrderUrl, get
 import { ALL_ORDERS, CLEAR_ERRORS, DELETE_ORDER, MY_ORDERS, NEW_ORDER, ORDER_DETAILS, PAYMENT_STATUS, 
   UPDATE_ORDER } from "../constants/orderConstants";
 
-const newOrder = (order) => async (dispatch) => {
+export const newOrder = (order) => async (dispatch) => {
   try {
     dispatch({ type: NEW_ORDER.NEW_ORDER_REQUEST });
     const config = {
@@ -19,7 +19,7 @@ const newOrder = (order) => async (dispatch) => {
   }
 };
 
-const myOrders = () => async (dispatch) => {
+export const myOrders = () => async (dispatch) => {
   try {
     dispatch({ type: MY_ORDERS.MY_ORDERS_REQUEST });
     const { data } = await axios.get(getMyOrdersUrl());
@@ -29,7 +29,7 @@ const myOrders = () => async (dispatch) => {
   }
 };
 
-const getOrderDetails = (id) => async (dispatch) => {
+export const getOrderDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: ORDER_DETAILS.ORDER_DETAILS_REQUEST });
     const { data } = await axios.get(getOrderDetailsUrl());
@@ -45,7 +45,7 @@ const getOrderDetails = (id) => async (dispatch) => {
   }
 };
 
-const getPaymentStatus = (id) => async (dispatch) => {
+export const getPaymentStatus = (id) => async (dispatch) => {
   try {
     dispatch({ type: PAYMENT_STATUS.PAYMENT_STATUS_REQUEST });
     const { data } = await axios.get(getPaymentStatusUrl());
@@ -59,7 +59,7 @@ const getPaymentStatus = (id) => async (dispatch) => {
   }
 };
 
-const getAllOrders = () => async (dispatch) => {
+export const getAllOrders = () => async (dispatch) => {
   try {
     dispatch({ type: ALL_ORDERS.ALL_ORDERS_REQUEST });
     const { data } = await axios.get(getAllOrdersUrl());
@@ -75,7 +75,7 @@ const getAllOrders = () => async (dispatch) => {
   }
 };
 
-const updateOrder = (id, order) => async (dispatch) => {
+export const updateOrder = (id, order) => async (dispatch) => {
   try {
     dispatch({ type: UPDATE_ORDER.UPDATE_ORDER_REQUEST });
     const config = {
@@ -93,7 +93,7 @@ const updateOrder = (id, order) => async (dispatch) => {
   }
 };
 
-const deleteOrder = () => (id) => async (dispatch) => {
+export const deleteOrder = () => (id) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_ORDER.DELETE_ORDER_REQUEST });
     const { data } = await axios.delete(getDeleteOrderUrl());
@@ -107,17 +107,6 @@ const deleteOrder = () => (id) => async (dispatch) => {
 };
 
 // Clear All Errors
-const clearErrors = () => (dispatch) => {
+export const clearErrors = () => (dispatch) => {
   dispatch({ type: CLEAR_ERRORS });
-};
-
-module.exports = {
-  newOrder,
-  myOrders,
-  getOrderDetails,
-  getPaymentStatus,
-  getAllOrders,
-  updateOrder,
-  deleteOrder,
-  clearErrors
 };

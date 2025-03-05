@@ -10,7 +10,7 @@ import { createProduct, clearErrors } from '../../actions/productAction';
 import ImageIcon from '@mui/icons-material/Image';
 import { categories } from '../../utils/commonUtils';
 import MetaData from "../../Layouts/Metadata";
-import BackdropLoader from '../Layouts/BackdropLoader';
+import BackdropLoader from '../../Layouts/BackdropLoader';
 
 const NewProduct = () => {
 

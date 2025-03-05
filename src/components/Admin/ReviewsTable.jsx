@@ -7,7 +7,7 @@ import Rating from '@mui/material/Rating';
 import Actions from './Actions';
 import { DELETE_REVIEW } from '../../constants/productConstants';
 import MetaData from "../../Layouts/Metadata";
-import BackdropLoader from '../Layouts/BackdropLoader';
+import BackdropLoader from '../../Layouts/BackdropLoader';
 
 const ReviewsTable = () => {
   const dispatch = useDispatch();

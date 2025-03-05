@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ALL_PRODUCTS, CLEAR_ERRORS, NEW_REVIEW, SLIDER_PRODUCTS } from "../constants/productConstants";
+import { ADMIN_PRODUCTS, ALL_PRODUCTS, CLEAR_ERRORS, NEW_REVIEW, SLIDER_PRODUCTS } from "../constants/productConstants";
 import { getNewReviewUserUrl, getProductsUrl } from "../utils/urlConfig";
 
 // This is a clearError action creator function. 
@@ -60,6 +60,24 @@ export const getSimilarProducts = (category) => async (dispatch) => {
   } catch (error) {
       dispatch({
           type: ALL_PRODUCTS.ALL_PRODUCTS_FAIL,
+          payload: error.response.data.message,
+      });
+  }
+};
+
+export const getAdminProducts = () => async (dispatch) => {
+  try {
+      dispatch({ type: ADMIN_PRODUCTS.ADMIN_PRODUCTS_REQUEST });
+
+      const { data } = await axios.get('/api/v1/admin/products');
+
+      dispatch({
+          type: ADMIN_PRODUCTS.ADMIN_PRODUCTS_SUCCESS,
+          payload: data.products,
+      });
+  } catch (error) {
+      dispatch({
+          type: ADMIN_PRODUCTS.ADMIN_PRODUCTS_FAIL,
           payload: error.response.data.message,
       });
   }
